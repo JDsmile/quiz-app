@@ -1,0 +1,38 @@
+.container {
+  text-align: center;
+  min-height: 100vh;
+  margin-top: 1em;
+}
+
+.title {
+  border-bottom: 3px solid black;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.quiz-img {
+  width: 95%;
+  margin-bottom: 15px;
+}
+
+.quiz-setting {
+  margin-bottom: 15px;
+}
+
+.settings-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+  padding: 20px;
+}
+/*# sourceMappingURL=loading.css.map */

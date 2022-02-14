@@ -1,0 +1,26 @@
+.container{
+    text-align: center;
+    min-height: 100vh;
+    margin-top: 1em;
+}
+
+.title{
+    border-bottom: 3px solid black;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+.quiz-img{
+    width: 95%;
+    margin-bottom: 15px;
+}
+.quiz-setting{
+    margin-bottom: 15px;
+}
+
+.settings-selection{
+    display: flex;
+    flex-direction: column;
+   justify-content: space-evenly;
+    flex: 0.8;
+    padding: 20px;
+}
