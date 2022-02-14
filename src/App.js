@@ -21,26 +21,23 @@ function App() {
 
 
   return (
-    <Router basename="quizapp">
+    <Router>
     <div className="App">
-      
-
     <Routes> 
         <Route path="/" element={<LoadingPage 
                                   getQuestions={getQuestions}
                                   setName={setName}
                                   name={name} / >}  />
-    </Routes>
 
-    <Routes>
-      <Route path="quiz"  element={<Quiz  questions={questions} 
+      <Route path="/quiz"  element={<Quiz  questions={questions} 
                                           name={name}
                                           score={score}
                                           setScore={setScore}/>}/>
     </Routes>
+ 
 
-    </div>
-    </Router>
+  </div>
+ </Router>
   );
 }
 
