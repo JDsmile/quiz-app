@@ -21,7 +21,7 @@ function App() {
 
 
   return (
-    <Router>
+    <Router basename="quizapp">
     <div className="App">
       
 
