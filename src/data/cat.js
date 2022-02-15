@@ -12,7 +12,7 @@ const Categories = [
     { category: "Board Games", value: 16 },
     { category: "Science and Nature", value: 17 },
     { category: "Computer", value: 18 },
-    { category: "Mathematics", value: 19 },
+    // { category: "Mathematics", value: 19 },
     { category: "Mythology", value: 20 },
     { category: "Sports", value: 21 },
     { category: "Geography", value: 22 },

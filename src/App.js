@@ -2,6 +2,7 @@ import LoadingPage from "./pages/loading/loading"
 import "./App.css"
 import React from "react";
 import Quiz from "./pages/quiz/quiz"
+import Result from "./pages/result/Results";
 import {BrowserRouter as Router,Route,Routes} from "react-router-dom"
 import axios from "axios"
 
@@ -21,7 +22,7 @@ function App() {
 
 
   return (
-    <Router>
+    <Router basename="quiz-app">
     <div className="App">
     <Routes> 
         <Route path="/" element={<LoadingPage 
@@ -29,13 +30,19 @@ function App() {
                                   setName={setName}
                                   name={name} / >}  />
 
-      <Route path="/quiz"  element={<Quiz  questions={questions} 
-                                          name={name}
-                                          score={score}
-                                          setScore={setScore}/>}/>
+      <Route path="/quiz"  element={
+        <Quiz  questions={questions} 
+                            name={name}
+                            score={score}
+                            setScore={setScore}/>}/>
+      <Route path="/results" element={<Result
+                              score={score}
+                              name={name} 
+                              setScore={setScore}/>
+                            }
+                            />
     </Routes>
  
-
   </div>
  </Router>
   );

@@ -2,25 +2,49 @@
     text-align: center;
     min-height: 100vh;
     margin-top: 1em;
+
 }
 
 .title{
-    border-bottom: 3px solid black;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
+    border-bottom: 2px solid gray;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    color:blueviolet;
+    font-size: 1.5rem;
 }
 .quiz-img{
     width: 95%;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+
+    @media (min-width:1024px) {
+        width: 50%;
+        
+    }
+
 }
 .quiz-setting{
     margin-bottom: 15px;
+    color: gray;
+    
 }
 
 .settings-selection{
     display: flex;
     flex-direction: column;
-   justify-content: space-evenly;
+    justify-content: space-evenly;
     flex: 0.8;
     padding: 20px;
+
+    @media (min-width:1024px){
+        width: 150%;
+    }
+
+}
+.flex{
+    @media (min-width:1024px){
+        display: flex;
+
+        align-items: center;
+        height: 80vh;
+    }
 }

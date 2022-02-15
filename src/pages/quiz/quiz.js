@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 import CircularProgress from '@mui/material/CircularProgress';
 import { color } from "@mui/system";
 import Alert from '@mui/material/Alert';
+import { useNavigate } from "react-router-dom";
 
 
 export default function Quiz({questions,name,score,setScore}){
@@ -14,6 +15,8 @@ export default function Quiz({questions,name,score,setScore}){
     const [correctAnswer, setCorrectAnswer] = React.useState()
     const [selected,setSelected] = React.useState()
     const [error, setError] = React.useState(false)
+
+    const navigate = useNavigate()
     
     useEffect(()=>{
         //shuffle answer array 
@@ -34,6 +37,13 @@ export default function Quiz({questions,name,score,setScore}){
             //show result
             setError(false)
         }
+
+        if(currentQuestion>=9){
+            navigate("/results")
+           
+        }
+
+
         
     }
 
@@ -44,6 +54,7 @@ export default function Quiz({questions,name,score,setScore}){
             return "wrong"
         } else if(choice===correctAnswer){
             return "correct"
+            
         }
     }
 
@@ -59,10 +70,10 @@ export default function Quiz({questions,name,score,setScore}){
     return(
         <div className="container">
             <h1 className="title">Test your knowlodge</h1>
-            <h2 className="intro">Welcome {name}</h2>
+            <h2 className="intro">Welcome, {name}</h2>
 
             <div className="board">
-                {questions && <p>Question:{currentQuestion+1} /10</p>}
+                {questions && <p>  Question: <span className="num">{currentQuestion+1} </span>/10</p>}
                 <p>Score: {score}</p>
             </div>
 
@@ -77,14 +88,18 @@ export default function Quiz({questions,name,score,setScore}){
                         {choices && choices.map((choice)=>(
                             <button className={`choice ${selected && checkSelect(choice)}`} onClick={()=>checkAnswer(choice)}
                             disabled={selected}
+                            key={choice}
                             >{he.decode(choice)}</button>
                             ))}
                     </div>
 
                     <div className="btns">
-                        <Button variant="contained" size="large" color="error">Quit</Button>
-                        <Button variant="contained" size="large"
-                        onClick={changeQuestion}>Next</Button>
+                        <Button variant="contained" size="large" 
+                          sx={{
+                            width: 200
+                          }}
+                        
+                        onClick={changeQuestion}>{currentQuestion>8 ? "Result" : " Next"}</Button>
                     </div>
 
                 </div>
