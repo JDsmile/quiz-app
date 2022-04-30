@@ -1,7 +1,8 @@
 .container{
     text-align: center;
-    min-height: 100vh;
+    // height: 100vh;
     margin-top: 1em;
+    overflow: hidden;
 
 }
 
@@ -10,7 +11,9 @@
     margin-bottom: 25px;
     padding-bottom: 15px;
     color:blueviolet;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    
 }
 .quiz-img{
     width: 95%;
@@ -18,13 +21,13 @@
 
     @media (min-width:1024px) {
         width: 50%;
-        
     }
 
 }
 .quiz-setting{
     margin-bottom: 15px;
-    color: gray;
+    color:blueviolet;
+    font-size: 1.6rem;
     
 }
 

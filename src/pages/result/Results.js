@@ -15,12 +15,11 @@ export default function Results({score,name,setScore,numberOfQuestions}){
     return(
         <div className="result-container">
             <p className="name"> {name}, <span>you scored  <span className="score">{score}</span> / {numberOfQuestions} </span></p>
-
-            <p>
-                {score >=8 ? "Well done" : "Try to do better next time"}
-            </p>
-
-            <Button onClick={reset}>Start Over</Button>
+            <Button 
+                size="large"
+                color="primary"
+                sx={{bgcolor:"white"}}
+                onClick={reset} >Start Over</Button>
         </div>
     )
 }

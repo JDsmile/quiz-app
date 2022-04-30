@@ -1,7 +1,7 @@
 .container {
   text-align: center;
-  min-height: 100vh;
   margin-top: 1em;
+  overflow: hidden;
 }
 
 .title {
@@ -9,7 +9,8 @@
   margin-bottom: 25px;
   padding-bottom: 15px;
   color: blueviolet;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
 }
 
 .quiz-img {
@@ -25,7 +26,8 @@
 
 .quiz-setting {
   margin-bottom: 15px;
-  color: gray;
+  color: blueviolet;
+  font-size: 1.6rem;
 }
 
 .settings-selection {

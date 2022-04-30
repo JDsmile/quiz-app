@@ -43,7 +43,8 @@ export default function Loading({getQuestions,name,setName,setNumberOfQuestions}
                         One or more field is empty!
                     </Alert>}
 
-                        <TextField label="Enter Your Name" style={{marginBottom:20}} required
+                        <TextField label="Enter Your Name" 
+                        style={{marginBottom:20}} required
                         onChange={(e)=>setName(e.target.value)}
                         />
                         
