@@ -1,5 +1,6 @@
 .container {
   text-align: center;
+  height: 90vh;
   margin-top: 1em;
   overflow: hidden;
 }
