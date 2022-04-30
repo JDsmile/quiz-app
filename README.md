@@ -6,13 +6,13 @@ An online app where you can test your knowledge on varity of topics.
 
 https://yusenjia.github.io/quiz-app/
 
-### technologies used
-. HTML
-. React Js
-. React Router
-. Scss
-. Metrial UI
-. OPEN TRIVIA API
+### Technologies used
+- HTML
+- React Js
+- React Router
+- Scss
+- Metrial UI
+- OPEN TRIVIA API
 
 ### `How to play`
 
