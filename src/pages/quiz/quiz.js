@@ -8,7 +8,7 @@ import Alert from '@mui/material/Alert';
 import { useNavigate } from "react-router-dom";
 
 
-export default function Quiz({questions,name,score,setScore}){
+export default function Quiz({questions,name,score,setScore,numberOfQuestions}){
 
     const [currentQuestion,setCurrentQuestion]= React.useState(0)
     const [choices,SetChoices] = React.useState([])
@@ -27,7 +27,7 @@ export default function Quiz({questions,name,score,setScore}){
     function changeQuestion(){
         if(!selected){
             setError(true)
-        } else if(currentQuestion<9)
+        } else if(currentQuestion<numberOfQuestions)
         {
             setCurrentQuestion(currentQuestion+1)
             setError(false)
@@ -38,13 +38,11 @@ export default function Quiz({questions,name,score,setScore}){
             setError(false)
         }
 
-        if(currentQuestion>=9){
+        if(currentQuestion>=numberOfQuestions-1){
             navigate("/results")
            
         }
 
-
-        
     }
 
     function checkSelect(choice){
@@ -73,12 +71,13 @@ export default function Quiz({questions,name,score,setScore}){
             <h2 className="intro">Welcome, {name}</h2>
 
             <div className="board">
-                {questions && <p>  Question: <span className="num">{currentQuestion+1} </span>/10</p>}
+                {questions && <p>  Question: <span className="num">{currentQuestion+1} </span>/{numberOfQuestions}</p>}
                 <p>Score: {score}</p>
             </div>
 
             {questions? (
                 <div className="question-container">
+
                     {error && <Alert variant="outlined" severity="error" style={{marginBottom:20}}>
                         Please select your answer</Alert>}
 
@@ -99,7 +98,8 @@ export default function Quiz({questions,name,score,setScore}){
                             width: 200
                           }}
                         
-                        onClick={changeQuestion}>{currentQuestion>8 ? "Result" : " Next"}</Button>
+                          //display "Result" when reach last question
+                        onClick={changeQuestion}>{currentQuestion>=numberOfQuestions-1 ? "Result" : " Next"}</Button>
                     </div>
 
                 </div>

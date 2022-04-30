@@ -8,10 +8,7 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import img from "../../../src/quiz.svg"
 
-
-
-
-export default function Loading({getQuestions,name,setName}){
+export default function Loading({getQuestions,name,setName,setNumberOfQuestions}){
 
     const [category,setCategory]= React.useState("")
     const [difffculty,setDifffculty] = React.useState("")
@@ -30,6 +27,7 @@ export default function Loading({getQuestions,name,setName}){
         }
     }
 
+    
     return(
 
         <div className="container">
@@ -49,7 +47,8 @@ export default function Loading({getQuestions,name,setName}){
                         onChange={(e)=>setName(e.target.value)}
                         />
                         
-                        <TextField select label="Select Category" 
+                        <TextField select 
+                            label="Select Category" 
                             style={{textAlign:"left",marginBottom:20}} 
                             defaultValue={""}
                             onChange={(e)=>setCategory(e.target.value)}
@@ -61,6 +60,24 @@ export default function Loading({getQuestions,name,setName}){
                                     {item.category}
                                 </MenuItem>
                             ))}
+                            
+                        </TextField>
+
+
+                        
+                        <TextField select 
+                            label="Number of questions" 
+                            style={{textAlign:"left",marginBottom:20}} 
+                            defaultValue={""}
+                            onChange={(e)=>setNumberOfQuestions(e.target.value)}
+                            required
+                            >
+
+                            {[...Array(10)].map((x, i) =>
+                                <MenuItem key={i} value={i+1}>
+                                    {i+1}
+                                </MenuItem>
+                            )}    
                         </TextField>
 
                         <TextField select label="Select Difficulty" 
