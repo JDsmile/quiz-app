@@ -13,6 +13,7 @@ https://yusenjia.github.io/quiz-app/
 - Scss
 - Metrial UI
 - OPEN TRIVIA API
+- Axios
 
 ### `How to play`
 
