@@ -1,6 +1,6 @@
 # Quiz App
 
-An online app where you can test your knowledge on varity of topics.
+A mobile friendly online app where you can test your knowledge on varity of topics.
 
 ![quiz-app](https://user-images.githubusercontent.com/60796582/174885956-cdfe6bc6-548d-4ab5-b15c-a26fde1c1469.png)
 
